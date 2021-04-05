@@ -137,7 +137,8 @@ function init() {
 
     // Set resource path
     let nftName = "ramen-1000px";
-    let nftUrl  = "../resources/nft/" + nftName;
+    //let nftUrl  = "../resources/nft/" + nftName; // for local test
+    let nftUrl  = "https://github.com/FollowTheDarkside/arjs-image-tracking-sample/tree/master/resources/nft/" + nftName;
 
     // Init controls for camera
     let markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
