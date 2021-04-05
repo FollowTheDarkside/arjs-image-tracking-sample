@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>AR.js Image Tracking Sample</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src='./sample.js'></script>
+</head>
+<body>
+    <div class="arjs-loader">
+        <div>Loading...</div>
+    </div>
+    <a-scene
+        vr-mode-ui="enabled: false;"
+        renderer='antialias: true; alpha: true; precision: mediump;'
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'
+    >
+        <a-assets>
+            <!-- <a-asset-item id="model" src="../resources/sample-entity.glb"></a-asset-item> -->
+            <a-asset-item id="model" src="../resources/LeePerrySmith.glb"></a-asset-item>
+            <img id="tex-image" src="../resources/Map-COL.jpg">
+        </a-assets>
+
+        <a-nft
+            samplehandler 
+            type='nft' url="../resources/ramen-1000px"
+            smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
+        >
+            <!-- <a-entity modify-materials gltf-model="#model" material="src:#tex-image" play-all-model-animations="" position="0 0 0" rotation="0 0 0" scale="100 100 100" visible="true">
+            </a-entity> -->
+            <a-entity modify-materials gltf-model="#model" play-all-model-animations="" position="0 500 0" rotation="-90 0 0" scale="50 50 50" visible="true">
+            </a-entity>
+        </a-nft>
+		<a-entity camera></a-entity>
+	</a-scene>
+</body>
