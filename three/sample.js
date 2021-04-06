@@ -139,7 +139,8 @@ function init() {
     let nftName = "ramen-1000px";
     //let nftUrl  = "../resources/nft/" + nftName; // for local test
     //let nftUrl  = "https://followthedarkside.github.io/arjs-image-tracking-sample/resources/" + nftName;
-    let nftUrl  = "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/FollowTheDarkside/arjs-image-tracking-sample/resources/nft/" + nftName;
+    //let nftUrl  = "https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/FollowTheDarkside/arjs-image-tracking-sample/resources/nft/" + nftName;
+    let nftUrl  = "https://arjs-cors-proxy.herokuapp.com/https://rawcdn.githack.com/FollowTheDarkside/arjs-image-tracking-sample/tree/master/resources/nft/" + nftName;
 
     // Init controls for camera
     let markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
